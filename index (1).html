@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repostería Deliciosa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenidos a Repostería Deliciosa</h1>
+        <p>Los mejores postres y pasteles hechos con amor y los mejores ingredientes.</p>
+        
+        <h2>Nuestros Productos</h2>
+        <div class="producto" onclick="mostrarAlerta('Pastel de Chocolate')">
+            <h3>Pastel de Chocolate</h3>
+            <p>Esponjoso y delicioso, cubierto con ganache de chocolate.</p>
+        </div>
+        <div class="producto" onclick="mostrarAlerta('Galletas de Vainilla')">
+            <h3>Galletas de Vainilla</h3>
+            <p>Doradas y crujientes con un toque de vainilla natural.</p>
+        </div>
+        <div class="producto" onclick="mostrarAlerta('Tarta de Frutas')">
+            <h3>Tarta de Frutas</h3>
+            <p>Fresca y ligera, con una base de crema pastelera.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fffaf0;
+    text-align: center;
+}
+h1, h2 {
+    color: #d2691e;
+}
+.container {
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+.producto {
+    background: #ffe4b5;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.producto:hover {
+    background: #ffcc80;
+}
+
+/* script.js */
+function mostrarAlerta(producto) {
+    alert('Has seleccionado ' + producto);
+}
